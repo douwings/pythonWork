@@ -1,0 +1,5 @@
+'Cookie': 'connect.sid=s%3AP8MWr_nfrhy7iOyb3nEyHVNQcBWTgRAf.PfOwrhkay2R2RNrfAReXlDDSXvVWdA2rPO2P6pY%2FzBg',
+        # 'Host': 'yy.cnns.net',
+        # 'If-None-Match': 'W/"3c-Gcipa+Pdg5p5k9yCA3NkFIyFZTM"',
+        # 'Referer': 'https://yy.cnns.net/Index',
+        # 'T-time': int(round(t * 1000)),

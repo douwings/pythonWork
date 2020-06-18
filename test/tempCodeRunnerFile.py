@@ -1,0 +1,1 @@
+    print((yue(n-1,m)+m-1)%n)
