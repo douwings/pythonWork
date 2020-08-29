@@ -20,9 +20,9 @@ while True:
     try:
         n = int(input().strip())
         k = int(input().strip())
-        list = []
-        for i in range(1, n+1, 1):
-            list.append(i)
+        list = list(range(1,n+1))
+        # for i in range(1, n+1, 1):
+            # list.append(i)
         print(get_num(n, k, '', list))
     except:
         break
