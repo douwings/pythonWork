@@ -1,0 +1,43 @@
+def inverse_number():
+    while True:
+        try:
+            n = input()
+            num_list = list(map(lambda x: abs(int(x)),input().strip().split(' ')))
+            print(len(num_list) - len(set(num_list)))
+        except:
+            break
+        
+if __name__ == "__main__":
+    inverse_number()
+    
+    
+    
+   
+   
+
+'''
+解题思路：相反数的数量 = list总数 - set(全部绝对值之后)总数
+''' 
+    
+'''
+题目描述
+有N个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数（a 和-a为一对相反数）。
+
+解答要求
+时间限制：2000ms, 内存限制：64MB
+输入
+输入数据包括两行，第一行包含一个正整数N。(1 <= N <= 200000)。
+第二行为N个用单个空格隔开的非零整数，每个数的绝对值不超过1000000000，保证这些整数各不相同。
+
+输出
+输出一行包含一个整数，即这N个数中包含多少对相反数。
+
+样例
+输入样例 1 复制
+
+5
+1 2 3 -1 -2
+输出样例 1
+
+2
+'''
