@@ -10,7 +10,7 @@ class myDB():
         self.cursor = self.conn.cursor()  # cursor当前的程序到数据之间连接管道
 
 local = myDB(host='localhost', user='root', password='xzlp1020',port = 3306, db='beforedata', charset='utf8mb4')
-cloud = myDB(host='loghost', user='root', password='zhiyun_mysql3307',port = 3306, db='zy_log', charset='utf8mb4')
+cloud = myDB(host='loghost', user='root', password='xzlp1020',port = 3306, db='zy_log', charset='utf8mb4')
 
 class MyThread(threading.Thread):
     def __init__(self,dictdata):
