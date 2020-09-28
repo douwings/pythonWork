@@ -2,8 +2,8 @@ let OSS = require('ali-oss');
 
 let client = new OSS({
     region: 'oss-cn-hangzhou',
-    accessKeyId: 'LTAIktjTb9MWQ1lc',
-    accessKeySecret: 'OQToVyBnH32bnUpSFLSvbVbhqdMryC',
+    accessKeyId: 'accessKeyId',
+    accessKeySecret: 'accessKeySecret',
     bucket: 'zymediapr',
 });
 
