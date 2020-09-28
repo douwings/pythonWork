@@ -3,8 +3,8 @@ let OSS = require('ali-oss');
 async function getFile(region, bucket, inputObject, getname) {
     let client = new OSS({
         region: region,
-        accessKeyId: 'LTAIktjTb9MWQ1lc',
-        accessKeySecret: 'OQToVyBnH32bnUpSFLSvbVbhqdMryC',
+        accessKeyId: 'accessKeyId',
+        accessKeySecret: 'accessKeyId',
         bucket: bucket,
     });
     try {
